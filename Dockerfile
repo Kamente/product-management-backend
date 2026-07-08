@@ -4,4 +4,4 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","target/backend-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=prod","-jar","target/backend-0.0.1-SNAPSHOT.jar"]
