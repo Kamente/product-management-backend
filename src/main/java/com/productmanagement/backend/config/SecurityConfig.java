@@ -40,6 +40,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
         http
+                .cors(cors -> {})
                 .csrf(csrf -> csrf.disable())
 
                 // JWT is stateless
